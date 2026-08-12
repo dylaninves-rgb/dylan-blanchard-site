@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gbmisa.github.io/dylan-blanchard-site/sitemap.xml
