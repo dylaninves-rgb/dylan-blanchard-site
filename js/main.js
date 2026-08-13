@@ -1,4 +1,4 @@
-/* Dylan Blanchard — site behaviour.
+/* Bylan Blanchard — site behaviour.
    Vanilla, no dependencies. Everything here is progressive enhancement:
    with JS off you still get the full gallery, working links and a usable form. */
 (function () {
@@ -174,7 +174,7 @@
         })
           .then(function (res) {
             if (!res.ok) throw new Error("send failed");
-            setStatus("Thanks — your enquiry is on its way. Dylan will reply by email.", false);
+            setStatus("Thanks — your enquiry is on its way. Bylan will reply by email.", false);
             form.reset();
           })
           .catch(function () {
