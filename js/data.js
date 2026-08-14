@@ -49,12 +49,14 @@ function renderSeriesCard(series) {
   a.className = "series-card";
   a.href = "series.html?s=" + encodeURIComponent(series.slug);
 
+  const cover = seriesCoverImage(series);
+
   a.innerHTML =
     '<div class="series-card__frame">' +
-      '<img src="' + seriesCoverImage(series) + '" alt="" loading="lazy">' +
+      (cover ? '<img src="' + cover + '" alt="" loading="lazy">' : '') +
     '</div>' +
     '<h3 class="series-card__title">' + series.title + '</h3>' +
-    '<p class="series-card__period">' + series.period + '</p>';
+    (series.period ? '<p class="series-card__period">' + series.period + '</p>' : '');
 
   return a;
 }

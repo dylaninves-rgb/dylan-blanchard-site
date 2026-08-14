@@ -19,9 +19,9 @@
   document.getElementById("page-title").textContent = document.title;
 
   header.innerHTML =
-    '<p class="series-header__period">' + series.period + '</p>' +
+    (series.period ? '<p class="series-header__period">' + series.period + '</p>' : '') +
     '<h1 class="series-header__title">' + series.title + '</h1>' +
-    '<p class="series-header__statement">' + series.statement + '</p>';
+    (series.statement ? '<p class="series-header__statement">' + series.statement + '</p>' : '');
 
   getArtworksBySeries(series.slug).forEach(function (artwork) {
     grid.appendChild(renderArtworkCard(artwork));

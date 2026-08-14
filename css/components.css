@@ -329,6 +329,33 @@
   font-weight: 500;
 }
 
+/* ---- dump (raw scrolling image feed) ---- */
+
+.dump-count {
+  font-size: var(--size-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-fg-muted);
+}
+
+.dump-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.dump-item {
+  width: 100%;
+  max-width: 46rem;
+  background: var(--color-border);
+}
+
+.dump-item img {
+  width: 100%;
+  height: auto;
+}
+
 /* ---- exhibitions list ---- */
 
 .exhibition {
