@@ -1,5 +1,6 @@
 /*
   Raw image dump — no titles, no metadata, just a running list of files.
+  Ordered so photos of the same canvas sit next to each other.
   To add a photo: drop the file in images/dump/ and add its path below,
   in whatever order you want it to appear.
 */
