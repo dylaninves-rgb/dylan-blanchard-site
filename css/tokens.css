@@ -1,0 +1,63 @@
+/* Design tokens — the entire visual language lives here. */
+
+:root {
+  /* ---- color: a dim gallery, not a dark app ---- */
+  --color-bg: #121013;
+  --color-bg-raised: #17151890;
+  --color-fg: #eae6df;
+  --color-fg-muted: #a39c94;
+  --color-fg-faint: #6f6862;
+  --color-border: #2b2723;
+  --color-accent: #b3915c; /* muted gold — used sparingly, never as a fill */
+  --color-focus: #d8c8a8;
+
+  /* ---- type ---- */
+  --font-display: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+  --font-body: "Inter", -apple-system, "Segoe UI", sans-serif;
+
+  --size-xs: 0.75rem;
+  --size-sm: 0.875rem;
+  --size-base: 1rem;
+  --size-lg: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
+  --size-xl: clamp(1.5rem, 1.2rem + 1.2vw, 2.25rem);
+  --size-2xl: clamp(2.25rem, 1.6rem + 2.8vw, 4rem);
+  --size-3xl: clamp(3rem, 1.8rem + 5vw, 6.5rem);
+
+  --leading-tight: 1.1;
+  --leading-snug: 1.35;
+  --leading-normal: 1.6;
+
+  --tracking-wide: 0.08em;
+  --tracking-wider: 0.16em;
+
+  /* ---- space ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2.5rem;
+  --space-6: 4rem;
+  --space-7: 6.5rem;
+  --space-8: 10rem;
+
+  /* ---- layout ---- */
+  --shell-width: 84rem;
+  --shell-padding: var(--space-4);
+
+  /* ---- motion ---- */
+  --ease-quiet: cubic-bezier(0.2, 0.6, 0.2, 1);
+  --duration-fast: 200ms;
+  --duration-slow: 700ms;
+}
+
+@media (min-width: 720px) {
+  :root {
+    --shell-padding: var(--space-5);
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --shell-padding: var(--space-6);
+  }
+}

@@ -3,172 +3,68 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Inquire — Bylan Blanchard</title>
-<meta name="description" content="Enquire about available paintings, pricing or a commission with Bylan Blanchard.">
-<meta property="og:title" content="Inquire — Bylan Blanchard">
-<meta property="og:description" content="Available work, pricing and commissions.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://gbmisa.github.io/dylan-blanchard-site/contact.html">
-<meta property="og:image" content="https://gbmisa.github.io/dylan-blanchard-site/images/artwork/work-06-1600.jpg">
-<link rel="canonical" href="https://gbmisa.github.io/dylan-blanchard-site/contact.html">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b0b0d'/%3E%3Cpath d='M6 23c4-3 6-13 11-15 3.2-1.3 6 .2 8 2.4-5 2-8 10.6-12 12.6-3 1.5-5 1-7 0z' fill='%23d8a94a'/%3E%3C/svg%3E">
+<title>Contact — Bylan Blanchard</title>
+<meta name="description" content="Contact Bylan Blanchard for inquiries and acquisitions.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23121013'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23b3915c'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
 
-<!-- PREVIEW BANNER — delete this element (and §15 of style.css) at launch -->
-<div class="preview-banner">
-  <strong>Preview build.</strong> Artwork shown is placeholder studio photography; titles and details are not final.
-</div>
-
 <header class="site-header">
   <div class="shell site-header__inner">
-    <a class="wordmark" href="index.html">Bylan <span>Blanchard</span></a>
+    <a class="wordmark" href="index.html">Bylan Blanchard</a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Menu">
-      <span class="nav-toggle__bars"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
     </button>
     <nav class="nav" id="nav" aria-label="Primary">
       <ul class="nav__list">
         <li><a class="nav__link" href="index.html">Home</a></li>
-        <li><a class="nav__link" href="gallery.html">Work</a></li>
+        <li><a class="nav__link" href="work.html">Work</a></li>
         <li><a class="nav__link" href="about.html">About</a></li>
-        <li><a class="nav__link" href="contact.html" aria-current="page">Inquire</a></li>
+        <li><a class="nav__link" href="exhibitions.html">Exhibitions</a></li>
+        <li><a class="nav__link" href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
 <main id="main">
+  <section class="section shell">
+    <h1 class="hero__title" style="margin-bottom: var(--space-5);">Contact</h1>
 
-  <section class="section">
-    <div class="shell">
-      <div class="split">
-        <div>
-          <p class="eyebrow">Inquire</p>
-          <h1 style="font-size: clamp(2.5rem, 1.8rem + 4vw, 4.5rem); margin-bottom: 1.75rem;">
-            Start a conversation
-          </h1>
-          <p class="lede">
-            For availability, pricing, or to talk about a commission. Notes go
-            straight to Bylan — expect a reply within a few days.
-          </p>
-          <hr class="stroke-rule" style="margin: 2.5rem 0;">
-          <p style="max-width: 30rem;">
-            If you have a particular piece in mind, name it in the form and
-            include the room or wall it&rsquo;s destined for — scale matters more
-            than anything else in this work.
-          </p>
-        </div>
+    <p class="prose">
+      For studio visits, press, or general inquiries, reach out at
+      <a class="text-link" href="mailto:studio@bylanblanchard.com" style="margin-left:0.25em">
+        studio@bylanblanchard.com <span class="text-link__arrow" aria-hidden="true">&rarr;</span>
+      </a>
+    </p>
 
-        <div>
-          <!--
-            Enquiry delivery (no custom server):
-              • Netlify (recommended for first deploy): data-netlify below is enough.
-                Submissions appear in the Netlify dashboard → Forms.
-              • Any other host: set formspreeId in js/site-config.js (free tier at formspree.io).
-            Honeypot field bot-field is hidden; leave it empty.
-          -->
-          <form
-            class="form"
-            name="inquiry"
-            method="POST"
-            action="thanks.html"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-            netlify
-          >
-            <input type="hidden" name="form-name" value="inquiry">
-            <input type="hidden" name="_subject" value="Bylan Blanchard — site enquiry">
-
-            <p class="hp-field" aria-hidden="true">
-              <label>Don&rsquo;t fill this out if you&rsquo;re human
-                <input type="text" name="bot-field" tabindex="-1" autocomplete="off">
-              </label>
-            </p>
-
-            <div class="field">
-              <label for="name">Your name</label>
-              <input type="text" id="name" name="name" autocomplete="name" required maxlength="200">
-            </div>
-
-            <div class="field">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" autocomplete="email" required maxlength="254">
-            </div>
-
-            <div class="field">
-              <label for="interest">What&rsquo;s this about?</label>
-              <select id="interest" name="interest">
-                <option value="available">A specific available painting</option>
-                <option value="commission">A commission</option>
-                <option value="pricing">Pricing &amp; availability generally</option>
-                <option value="other">Something else</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="piece">Piece of interest <span style="text-transform:none; letter-spacing:0; color:var(--bone-3);">(optional)</span></label>
-              <input type="text" id="piece" name="piece" placeholder="e.g. Untitled VI" maxlength="200">
-            </div>
-
-            <div class="field">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" required maxlength="5000"></textarea>
-            </div>
-
-            <button class="btn btn--solid" type="submit">
-              Send enquiry <span class="btn__arrow" aria-hidden="true">&rarr;</span>
-            </button>
-
-            <p class="field__hint" id="form-status" role="status" aria-live="polite" style="margin-top: 1.5rem;">
-              Loading form status…
-            </p>
-          </form>
-        </div>
-      </div>
-    </div>
+    <p class="prose">
+      <strong>Acquiring work.</strong> Availability for each painting is
+      noted on its page. Reach out with the title for pricing, shipping,
+      and condition details — inquiries are answered directly, without a
+      shop cart.
+    </p>
   </section>
-
 </main>
 
 <footer class="site-footer">
-  <div class="shell">
-    <div class="site-footer__grid">
-      <div>
-        <a class="wordmark" href="index.html">Bylan <span>Blanchard</span></a>
-        <p style="margin-top: 1rem; max-width: 22rem; font-size: 0.9375rem;">
-          Raw, gestural painting. Studio practice based in Arizona.
-        </p>
-      </div>
-      <div>
-        <h3>Site</h3>
-        <ul>
-          <li><a href="gallery.html">Work</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Inquire</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3>Contact</h3>
-        <ul>
-          <!-- TODO: replace with Bylan's real contact address -->
-          <li><a href="contact.html">Send an enquiry</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="site-footer__base">
-      <span>&copy; 2026 Bylan Blanchard. All rights reserved.</span>
-      <span>Part of Genius Creative</span>
-    </div>
+  <div class="shell site-footer__inner">
+    <span>&copy; 2026 Bylan Blanchard</span>
+    <a href="contact.html">Inquiries</a>
   </div>
 </footer>
 
-<script src="js/site-config.js"></script>
-<script src="js/main.js"></script>
+<script src="js/nav.js"></script>
 </body>
 </html>

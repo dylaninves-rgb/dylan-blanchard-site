@@ -4,169 +4,70 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About — Bylan Blanchard</title>
-<meta name="description" content="Bylan Blanchard on how he started painting, what the work is about, and why it stays raw, abstract and intuitive.">
-<meta property="og:title" content="About — Bylan Blanchard">
-<meta property="og:description" content="How he started, what the work is about, and why it stays raw.">
-<meta property="og:type" content="profile">
-<meta property="og:url" content="https://gbmisa.github.io/dylan-blanchard-site/about.html">
-<meta property="og:image" content="https://gbmisa.github.io/dylan-blanchard-site/images/artwork/work-06-1600.jpg">
-<link rel="canonical" href="https://gbmisa.github.io/dylan-blanchard-site/about.html">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b0b0d'/%3E%3Cpath d='M6 23c4-3 6-13 11-15 3.2-1.3 6 .2 8 2.4-5 2-8 10.6-12 12.6-3 1.5-5 1-7 0z' fill='%23d8a94a'/%3E%3C/svg%3E">
+<meta name="description" content="Artist statement and background for Bylan Blanchard.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23121013'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23b3915c'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
 
-<!-- PREVIEW BANNER — delete this element (and §15 of style.css) at launch -->
-<div class="preview-banner">
-  <strong>Preview build.</strong> Artwork shown is placeholder studio photography; titles and details are not final.
-</div>
-
 <header class="site-header">
   <div class="shell site-header__inner">
-    <a class="wordmark" href="index.html">Bylan <span>Blanchard</span></a>
+    <a class="wordmark" href="index.html">Bylan Blanchard</a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Menu">
-      <span class="nav-toggle__bars"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
     </button>
     <nav class="nav" id="nav" aria-label="Primary">
       <ul class="nav__list">
         <li><a class="nav__link" href="index.html">Home</a></li>
-        <li><a class="nav__link" href="gallery.html">Work</a></li>
-        <li><a class="nav__link" href="about.html" aria-current="page">About</a></li>
-        <li><a class="nav__link" href="contact.html">Inquire</a></li>
+        <li><a class="nav__link" href="work.html">Work</a></li>
+        <li><a class="nav__link" href="about.html">About</a></li>
+        <li><a class="nav__link" href="exhibitions.html">Exhibitions</a></li>
+        <li><a class="nav__link" href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
 <main id="main">
+  <section class="section shell">
+    <h1 class="hero__title" style="margin-bottom: var(--space-5);">About</h1>
 
-  <section class="section" style="padding-bottom: clamp(2.5rem, 6vw, 4rem);">
-    <div class="shell">
-      <p class="eyebrow">About</p>
-      <h1 style="font-size: clamp(2.5rem, 1.8rem + 4vw, 4.5rem); margin-bottom: 1.75rem;">
-        Bylan Blanchard
-      </h1>
-      <p class="lede">
-        Painter. The work is raw, abstract and intuitive — made by feel rather
-        than from reference.
-      </p>
-    </div>
+    <!-- Placeholder statement — replace with real biography and artist statement. -->
+    <p class="prose">
+      <strong>Bylan Blanchard</strong> is a painter working primarily in oil
+      and mixed media, in bodies of work rather than single images. The
+      paintings return to a small set of questions — how identity holds
+      together under observation, what desire and insecurity do to
+      perception, and how memory rewrites itself in the retelling — without
+      much interest in answering them cleanly.
+    </p>
+    <p class="prose">
+      The work draws on classical painting and architecture, anime, film,
+      and abstraction in roughly equal measure, more for their handling of
+      figure and structure than for any single visual style. Each series is
+      its own extended argument; individual paintings are read as chapters,
+      not standalone statements.
+    </p>
   </section>
-
-  <section style="padding-bottom: var(--space-section);">
-    <div class="shell">
-      <div class="split">
-        <div class="portrait-col">
-          <div class="portrait-slot">
-            <span class="portrait-slot__label">Portrait<br>to come</span>
-          </div>
-          <!-- TODO: swap .portrait-slot for Bylan's headshot / studio photo.
-               Suggested: <img src="images/dylan-portrait.jpg" width="" height=""
-               alt="Bylan Blanchard in the studio"> -->
-        </div>
-
-        <div class="prose">
-          <h2>How it started</h2>
-          <p>
-            &ldquo;I found myself needing to take on some creative passion or
-            pursuit, and I was given the opportunity as well as an experience I
-            couldn&rsquo;t exactly translate myself. And so I translated it
-            through art.&rdquo;
-          </p>
-
-          <h2>The work</h2>
-          <blockquote>
-            <p>
-              My work is about the different ways I felt disconnected or
-              separate from those experiences that are right nearby.
-            </p>
-          </blockquote>
-          <p>
-            &ldquo;The feelings that are in the back door, the things that just
-            get unsaid, the faces that get looked at but not seen. So it&rsquo;s
-            about expressing and finding the deep parts of myself and others
-            while also trying to find my way in the world.&rdquo;
-          </p>
-
-          <h2>Influences</h2>
-          <p>
-            &ldquo;I can&rsquo;t think of many influences by name, but I would be
-            able to recognise some of the work if I saw it. My work tends to be
-            so raw, abstract and intuitive that it&rsquo;s hard for me to find
-            someone that I can truly connect with artistically.&rdquo;
-          </p>
-
-          <hr class="stroke-rule" style="margin: 3rem 0;">
-
-          <h2>Selected</h2>
-          <ul class="facts">
-            <li>
-              <span class="facts__key">Exhibited</span>
-              <span class="facts__val">Shown at a small gallery</span>
-            </li>
-            <li>
-              <span class="facts__key">Collections</span>
-              <span class="facts__val">Work held privately</span>
-            </li>
-            <li>
-              <span class="facts__key">Based</span>
-              <span class="facts__val">Arizona</span>
-            </li>
-          </ul>
-          <!-- TODO: expand as Bylan adds shows, collections, press.
-               Pending from Bylan: quotes he wants to lead with. -->
-
-          <div class="btn-row" style="margin-top: 3rem;">
-            <a class="btn btn--solid" href="gallery.html">
-              See the work <span class="btn__arrow" aria-hidden="true">&rarr;</span>
-            </a>
-            <a class="btn" href="contact.html">Inquire</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
 </main>
 
 <footer class="site-footer">
-  <div class="shell">
-    <div class="site-footer__grid">
-      <div>
-        <a class="wordmark" href="index.html">Bylan <span>Blanchard</span></a>
-        <p style="margin-top: 1rem; max-width: 22rem; font-size: 0.9375rem;">
-          Raw, gestural painting. Studio practice based in Arizona.
-        </p>
-      </div>
-      <div>
-        <h3>Site</h3>
-        <ul>
-          <li><a href="gallery.html">Work</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Inquire</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3>Contact</h3>
-        <ul>
-          <!-- TODO: replace with Bylan's real contact address -->
-          <li><a href="contact.html">Send an enquiry</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="site-footer__base">
-      <span>&copy; 2026 Bylan Blanchard. All rights reserved.</span>
-      <span>Part of Genius Creative</span>
-    </div>
+  <div class="shell site-footer__inner">
+    <span>&copy; 2026 Bylan Blanchard</span>
+    <a href="contact.html">Inquiries</a>
   </div>
 </footer>
 
-<script src="js/site-config.js"></script>
-<script src="js/main.js"></script>
+<script src="js/nav.js"></script>
 </body>
 </html>

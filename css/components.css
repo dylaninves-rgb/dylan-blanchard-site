@@ -1,0 +1,368 @@
+/* Reusable pieces: hero, cards, metadata, links, tags. */
+
+/* ---- hero (home) ---- */
+
+.hero {
+  padding-block: var(--space-7) var(--space-6);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-5);
+}
+
+@media (min-width: 900px) {
+  .hero {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    align-items: end;
+  }
+}
+
+.hero__eyebrow {
+  font-size: var(--size-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-fg-muted);
+}
+
+.hero__title {
+  font-size: var(--size-3xl);
+  font-weight: 400;
+  font-style: italic;
+  max-width: 20ch;
+}
+
+.hero__statement {
+  max-width: 42ch;
+  color: var(--color-fg-muted);
+  font-size: var(--size-lg);
+  line-height: var(--leading-snug);
+}
+
+/* ---- understated text link ---- */
+
+.text-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  font-size: var(--size-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-fg);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-1);
+  transition: border-color var(--duration-fast) var(--ease-quiet), color var(--duration-fast) var(--ease-quiet);
+}
+
+.text-link:hover {
+  border-color: var(--color-accent);
+}
+
+.text-link__arrow {
+  transition: transform var(--duration-fast) var(--ease-quiet);
+}
+
+.text-link:hover .text-link__arrow {
+  transform: translateX(0.2em);
+}
+
+/* ---- section heading ---- */
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-3);
+}
+
+.section-heading__title {
+  font-size: var(--size-xl);
+}
+
+/* ---- view toggle (Work page: Series / All Work) ---- */
+
+.view-toggle {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.view-toggle__btn {
+  font-size: var(--size-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-fg-faint);
+  padding-bottom: var(--space-1);
+  border-bottom: 1px solid transparent;
+}
+
+.view-toggle__btn[aria-pressed="true"] {
+  color: var(--color-fg);
+  border-bottom-color: var(--color-accent);
+}
+
+.view-toggle__btn:hover {
+  color: var(--color-fg);
+}
+
+/* ---- artwork card ---- */
+
+.artwork-card {
+  display: block;
+}
+
+.artwork-card__frame {
+  overflow: hidden;
+  background: var(--color-border);
+  opacity: 0;
+  animation: reveal var(--duration-slow) var(--ease-quiet) forwards;
+}
+
+.artwork-card__frame img {
+  width: 100%;
+  height: auto;
+  transition: transform var(--duration-slow) var(--ease-quiet);
+}
+
+.artwork-card:hover .artwork-card__frame img {
+  transform: scale(1.02);
+}
+
+.artwork-card__title {
+  margin-top: var(--space-3);
+  font-size: var(--size-base);
+}
+
+.artwork-card__meta {
+  margin-top: var(--space-1);
+  font-size: var(--size-xs);
+  color: var(--color-fg-faint);
+  letter-spacing: var(--tracking-wide);
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .artwork-card__frame {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* ---- series card (Work page, series view) ---- */
+
+.series-card__frame {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--color-border);
+}
+
+.series-card__frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slow) var(--ease-quiet);
+}
+
+.series-card:hover .series-card__frame img {
+  transform: scale(1.03);
+}
+
+.series-card__title {
+  margin-top: var(--space-3);
+  font-size: var(--size-lg);
+}
+
+.series-card__period {
+  margin-top: var(--space-1);
+  font-size: var(--size-xs);
+  color: var(--color-fg-faint);
+  letter-spacing: var(--tracking-wide);
+}
+
+/* ---- series header (Series detail page) ---- */
+
+.series-header {
+  padding-block: var(--space-6) var(--space-5);
+  max-width: 52ch;
+}
+
+.series-header__period {
+  font-size: var(--size-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-fg-muted);
+}
+
+.series-header__title {
+  margin-top: var(--space-2);
+  font-size: var(--size-2xl);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.series-header__statement {
+  margin-top: var(--space-4);
+  color: var(--color-fg-muted);
+  font-size: var(--size-lg);
+  line-height: var(--leading-snug);
+}
+
+/* ---- artwork detail page ---- */
+
+.artwork-detail {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-5);
+  padding-block: var(--space-5) var(--space-6);
+}
+
+.artwork-detail__image {
+  background: var(--color-border);
+}
+
+.artwork-detail__image img {
+  width: 100%;
+  height: auto;
+}
+
+.artwork-detail__title {
+  font-size: var(--size-2xl);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.artwork-detail__series-link {
+  display: inline-block;
+  margin-top: var(--space-2);
+  font-size: var(--size-sm);
+  color: var(--color-fg-muted);
+}
+
+.artwork-detail__series-link:hover {
+  color: var(--color-fg);
+}
+
+.meta-list {
+  margin-top: var(--space-4);
+  display: grid;
+  gap: var(--space-2) var(--space-4);
+  grid-template-columns: auto minmax(0, 1fr);
+  font-size: var(--size-sm);
+}
+
+.meta-list dt {
+  color: var(--color-fg-faint);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  font-size: var(--size-xs);
+}
+
+.meta-list dd {
+  margin: 0;
+  color: var(--color-fg-muted);
+}
+
+.availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  color: var(--color-fg-muted);
+}
+
+.availability::before {
+  content: "";
+  width: 0.4em;
+  height: 0.4em;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.availability[data-status="Sold"]::before,
+.availability[data-status="Not for sale"]::before {
+  background: var(--color-fg-faint);
+}
+
+.artwork-detail__description {
+  margin-top: var(--space-4);
+  max-width: 60ch;
+  color: var(--color-fg-muted);
+  line-height: var(--leading-normal);
+}
+
+@media (min-width: 900px) {
+  .artwork-detail {
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .artwork-detail__info {
+    position: sticky;
+    top: 6rem;
+  }
+}
+
+/* ---- prose (about / exhibitions / contact copy) ---- */
+
+.prose {
+  max-width: 62ch;
+  color: var(--color-fg-muted);
+  font-size: var(--size-lg);
+  line-height: var(--leading-snug);
+}
+
+.prose + .prose {
+  margin-top: var(--space-4);
+}
+
+.prose strong {
+  color: var(--color-fg);
+  font-weight: 500;
+}
+
+/* ---- exhibitions list ---- */
+
+.exhibition {
+  display: grid;
+  gap: var(--space-1) var(--space-4);
+  grid-template-columns: minmax(0, 1fr);
+  padding-block: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.exhibition:first-child {
+  border-top: 1px solid var(--color-border);
+}
+
+.exhibition__year {
+  font-size: var(--size-xs);
+  letter-spacing: var(--tracking-wider);
+  color: var(--color-fg-faint);
+}
+
+.exhibition__title {
+  font-size: var(--size-lg);
+  font-family: var(--font-display);
+  font-style: italic;
+}
+
+.exhibition__venue {
+  color: var(--color-fg-muted);
+  font-size: var(--size-sm);
+}
+
+@media (min-width: 700px) {
+  .exhibition {
+    grid-template-columns: 6rem minmax(0, 1fr);
+    align-items: baseline;
+  }
+}

@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bylan Blanchard — Paintings</title>
-<meta name="description" content="Paintings by Bylan Blanchard, presented in series — on identity, desire, perception, and transformation.">
+<title>Work — Bylan Blanchard</title>
+<meta name="description" content="Paintings by Bylan Blanchard, browsable by series or as a complete collection.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23121013'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23b3915c'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,39 +39,23 @@
 </header>
 
 <main id="main">
-
-  <section class="hero shell">
-    <div>
-      <p class="hero__eyebrow">Bylan Blanchard</p>
-      <h1 class="hero__title">Paintings that don't resolve.</h1>
+  <section class="section--tight shell">
+    <div class="section-heading">
+      <h1 class="section-heading__title">Work</h1>
+      <div class="view-toggle" role="group" aria-label="Browse by">
+        <button class="view-toggle__btn" id="view-series-btn" aria-pressed="true">Series</button>
+        <button class="view-toggle__btn" id="view-all-btn" aria-pressed="false">All Work</button>
+      </div>
     </div>
-    <p class="hero__statement">
-      Work made in series, about identity, desire, and the versions of
-      ourselves we perform, doubt, and outgrow — perception, transformation,
-      memory, and the absence of a tidy ending.
-    </p>
   </section>
 
-  <section class="section shell" aria-labelledby="featured-heading">
-    <div class="section-heading">
-      <h2 class="section-heading__title" id="featured-heading">Recent Work</h2>
-      <a class="text-link" href="work.html">
-        View all <span class="text-link__arrow" aria-hidden="true">&rarr;</span>
-      </a>
-    </div>
-    <div class="grid grid--3up" id="featured-grid"></div>
-  </section>
-
-  <section class="section section--tight shell" aria-labelledby="series-heading">
-    <div class="section-heading">
-      <h2 class="section-heading__title" id="series-heading">Series</h2>
-      <a class="text-link" href="work.html?view=series">
-        Browse by series <span class="text-link__arrow" aria-hidden="true">&rarr;</span>
-      </a>
-    </div>
+  <section class="section section--tight shell" id="series-view">
     <div class="grid grid--3up" id="series-grid"></div>
   </section>
 
+  <section class="section section--tight shell" id="all-view" hidden>
+    <div class="grid grid--3up" id="all-grid"></div>
+  </section>
 </main>
 
 <footer class="site-footer">
@@ -85,6 +69,6 @@
 <script src="data/artworks.js"></script>
 <script src="js/data.js"></script>
 <script src="js/nav.js"></script>
-<script src="js/home.js"></script>
+<script src="js/work.js"></script>
 </body>
 </html>
